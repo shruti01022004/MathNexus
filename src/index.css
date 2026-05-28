@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* BODY (DARK GRADIENT) */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #0f172a, #020617);
+    color: #e2e8f0;
+    overflow-x: hidden;
+}
+
+
+/* LINKS */
+
+a {
+    position: relative;
+    text-decoration: none;
+    color: #cbd5f5;
+    transition: 0.3s;
+}
+
+
+/* LINK HOVER LINE */
+
+a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background: #ec4899;
+    transition: 0.3s;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+a:hover {
+    color: #f472b6;
+}
+
+
+/* BUTTON */
+
+button {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(236, 72, 153, 0.4);
+}
+
+
+/* INPUTS */
+
+input,
+textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #ec4899;
+    box-shadow: 0 0 12px rgba(236, 72, 153, 0.5);
+    outline: none;
+}
+
+
+/* GLASS CARD */
+
+.glass {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+
+/* NAVBAR GLASS */
+
+.nav-glass {
+    backdrop-filter: blur(25px);
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ec4899;
+    border-radius: 10px;
+}
+
+
+/* FLOAT ANIMATION */
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-25px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+/* FADE */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* GLOW TEXT */
+
+.glow-text {
+    color: #fff;
+    text-shadow: 0 0 10px #ec4899, 0 0 20px #ec4899, 0 0 40px #ec4899;
+}
+
+input:focus+label,
+textarea:focus+label,
+input:not(:placeholder-shown)+label,
+textarea:not(:placeholder-shown)+label {
+    top: -8px;
+    font-size: 12px;
+    color: #ec4899;
+}
+
+button:active {
+    transform: scale(0.96);
+}
